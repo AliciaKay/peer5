@@ -1,0 +1,9 @@
+db.getCollection('bios').find({awards:{$exists:true}});
+
+db.getCollection('bios').find({awards:{$exists:false}});
+
+db.getCollection('bios').find({$or: [ {contribs: 'OOP'}, {contribs: 'UNIX'} ] });
+
+db.getCollection('bios').find({"awards.award": "Turing Award"});
+
+db.getCollection('bios').find( {'_id': { $in: [3, 7]}} );
